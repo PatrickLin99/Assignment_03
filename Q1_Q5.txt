@@ -1,0 +1,27 @@
+
+Q1. 在一個類別(class)裡面設定權限來決定外界是否可以更改在該類別(class)裡的值或特性
+    優點: 防止在該類別的值或特性輕易被改變或影響
+
+Q2. 在有相同屬性的類別裡，建立不同性質的變數(例如在人類這個大圈圈的類別，又有不同的小圈圈像是白種人 黃種人 黑人等等)
+    透過enum的特性，可以根據enum建立的屬性與方法，得到(或呼叫)該物件所屬特性
+
+Q3.  enum class membership(val level: Int) {
+           UpClass(1),
+           MidClass(0),
+           DownClass(-1)
+}
+           println(membership.UpClass.level)
+           println(membership.UpClass.level.toString())
+------------------------------------------------------------
+1
+1
+
+Q4. LinearLayout 設定版面為水平或垂直的設計
+    RelativeLayout 根據相對位子將不同的物件放在版面上，具父子關係可連動
+
+Q5. 因為RelativeLayout具父子關係，故版面若進行設計變更，可藉由微調基座(父)達到整題改變的效果，但不影響及各物件的相對距離及位子
+    若物件無相對關係，則須針對每個物件進行微調，較費時
+
+
+
+
