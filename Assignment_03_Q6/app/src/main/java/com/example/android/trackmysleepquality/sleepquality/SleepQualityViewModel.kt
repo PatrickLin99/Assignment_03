@@ -16,7 +16,6 @@
 
 package com.example.android.trackmysleepquality.sleepquality
 
-import android.app.Activity
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -59,7 +58,6 @@ class SleepQualityViewModel(
      */
     private val _navigateToSleepTracker = MutableLiveData<Boolean?>()
 
-
     /**
      * When true immediately navigate back to the [SleepTrackerFragment]
      */
@@ -75,7 +73,6 @@ class SleepQualityViewModel(
         super.onCleared()
         viewModelJob.cancel()
     }
-    var sleepInfo : String = ""
 
     /**
      * Call this immediately after navigating to [SleepTrackerFragment]
@@ -84,13 +81,14 @@ class SleepQualityViewModel(
         _navigateToSleepTracker.value = null
     }
 
+    var sleepInfo: String = ""
+
     /**
      * Sets the sleep quality and updates the database.
      *
      * Then navigates back to the SleepTrackerFragment.
      */
     fun onSetSleepQuality(quality: Int) {
-
         uiScope.launch {
             // IO is a thread pool for running operations that access the disk, such as
             // our Room database.
